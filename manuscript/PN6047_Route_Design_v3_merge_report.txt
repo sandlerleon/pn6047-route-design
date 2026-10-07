@@ -1,0 +1,345 @@
+accepted 87 hunks in 34 paragraphs, rejected 173 hunks
+
+SKIP paragraph changed in the build | An Evidence-Graded Framework for Pharmaceutical Route Select
+  accept  [prioritisation] -> [prioritization]
+PARAGRAPH Methods: No synthesis was performed. Operations exemplified 
+SKIP paragraph changed in the build | Results: The exemplified route (milligram to gram scale; fin
+  accept  [prioritisation] -> [prioritization]
+  reject  [a] -> [the]
+PARAGRAPH Conclusion: The framework converts public route information 
+  accept  [about] -> [approximately]
+  reject  [] -> [; however]
+  reject  [ yet] -> []
+  reject  [Applied] -> [When applied]
+  reject  [ it showed that] -> []
+  reject  [ that] -> []
+PARAGRAPH Summary (about 100 words). Discovery-scale synthetic routes 
+  reject  [-] -> [ ]
+  reject  [in a ] -> []
+  reject  [ application] -> []
+PARAGRAPH PN6047, 4-[(3-carbamoylphenyl)[1-(1,3-thiazol-5-ylmethyl)pip
+  accept  [programme] -> [program]
+  accept  [] -> [,]
+  reject  [] -> [which are ]
+  reject  [] -> [ their]
+  reject  [harder] -> [difficult]
+  accept  [catalysed] -> [catalyzed]
+  reject  [What the] -> [The]
+  reject  [ is] -> []
+  reject  [manufacture] -> [manufacturing]
+PARAGRAPH A synthesis that supplies a discovery programme is rarely a 
+  reject  [.] -> [?]
+  accept  [hypothesised] -> [hypothesized]
+  accept  [prioritisation] -> [prioritization]
+  reject  [The] -> [This]
+  reject  [manufacture] -> [manufacturing]
+PARAGRAPH The general question is how the public information on a disc
+  reject  [,] -> [;]
+  reject  [is] -> [was]
+  reject  [,] -> [;]
+  reject  [made] -> [performed]
+  accept  [labelled] -> [labeled]
+PARAGRAPH The paper does not claim that any proposed route works. No s
+  reject  [of] -> [from]
+  accept  [] -> [,]
+  accept  [,] -> []
+PARAGRAPH The study is a literature- and document-based screening exer
+  reject  [provide] -> [provided]
+  accept  [] -> [,]
+  accept  [programme] -> [program]
+  reject  [,] -> [ and]
+  reject  [should] -> [was]
+  reject  [ be] -> []
+  reject  [] -> [the ]
+  accept  [] -> [,]
+  reject  [built] -> [constructed]
+PARAGRAPH The primary sources are the two patent documents above [3, 4
+  reject  [functionalisation joining them] -> [functionalization]
+  reject  [ the] -> []
+PARAGRAPH PN6047 was decomposed into five stages (Fig. 1): the thiazol
+  accept  [colours] -> [colors]
+PARAGRAPH Fig. 1 Retrosynthetic framework for PN6047. Highlighted bond
+  reject  [Classes] -> [The]
+  reject  [map] -> [classes are mapped]
+  reject  [is] -> [are]
+  reject  [a validation] -> [validated]
+  reject  [] -> [ the]
+PARAGRAPH Each operation received two grades (Table 1): one for the tr
+  reject  [] -> [the ]
+PARAGRAPH Table 1 Evidence classes used to grade the transformation an
+  reject  [] -> [and ]
+  reject  [keeps] -> [maintains]
+  accept  [pre-installs] -> [preinstalls]
+  accept  [crystallisation] -> [crystallization]
+  reject  [the ] -> []
+  accept  [functionalisation] -> [functionalization]
+  reject  [] -> [ the]
+PARAGRAPH Route R0 is the sequence exemplified in the patent documents
+  accept  [] -> [,]
+PARAGRAPH For each route the model reports the number of steps N and t
+  reject  [every] -> [Every]
+  accept  [labelled] -> [labeled]
+  accept  [] -> [,]
+  reject  [it] -> [It]
+  accept  [] -> [,]
+  accept  [] -> [,]
+  accept  [] -> [,]
+  accept  [] -> [,]
+  accept  [] -> [,]
+  accept  [programme] -> [program]
+PARAGRAPH A framework for screening routes before process development 
+  reject  [the] -> [The]
+  reject  [] -> [; thus]
+  reject  [ so that] -> []
+  reject  [this] -> [This]
+  reject  [the] -> [The]
+  reject  [] -> [the ]
+PARAGRAPH Three propositions were stated so that the output could cont
+  accept  [prioritisation] -> [prioritization]
+PARAGRAPH 2.8 Risk register and sensitivity of risk prioritisation to 
+  accept  [] -> [,]
+  accept  [prioritisation] -> [prioritization]
+  reject  [see] -> [determine]
+  reject  [depends] -> [depended]
+  reject  [one] -> [distribution]
+  reject  [one] -> [distribution]
+  reject  [of] -> [in]
+  reject  [least] -> [lowest]
+  reject  [brings] -> [decreases]
+  reject  [ down] -> []
+PARAGRAPH Twelve development risks of the proposed routes were listed,
+  reject  [] -> [ the]
+  reject  [show] -> [determine]
+  reject  [about] -> [of]
+PARAGRAPH Because flags and validation burden are different quantities
+  reject  [Calculations] -> [The calculations]
+  accept  [analogues] -> [analogs]
+  accept  [] -> [,]
+  reject  [] -> [ were]
+PARAGRAPH Calculations use Python with NumPy and, for structures, RDKi
+  reject  [] -> [in ]
+  reject  [code] -> [coding]
+  reject  [was] -> [were]
+  reject  [] -> [the ]
+PARAGRAPH A large language model (Claude, Anthropic) was used to assis
+  reject  [patent] -> [patents]
+PARAGRAPH 3.1 Consistency of the structural data with the patent
+  accept  [] -> [,]
+  reject  [Recomputed] -> [The recomputed]
+  accept  [analogue] -> [analog]
+  accept  [analogue] -> [analog]
+  reject  [to] -> [with]
+  accept  [] -> [,]
+  reject  [the] -> [values]
+  reject  [values] -> [of]
+  reject  [] -> [, respectively]
+PARAGRAPH The structure of PN6047 corresponds to C26H28N4O2S with a re
+  reject  [] -> [the ]
+  accept  [ ] -> []
+  accept  [] -> [,]
+  reject  [] -> [and ]
+  reject  [The amorphous] -> [Amorphous]
+  accept  [lyophilisation] -> [lyophilization]
+  reject  [are] -> [have been]
+  accept  [] -> [,]
+  reject  [is] -> [has been]
+  reject  [ the] -> []
+  reject  [manufacture] -> [manufacturing]
+PARAGRAPH Table 3 maps each operation to the public evidence. All five
+  reject  [each] -> [Each]
+  reject  [ the] -> []
+  reject  [record] -> [records]
+  reject  [abstract] -> [abstracts]
+PARAGRAPH Table 3 Precedent map: each operation with the strength of t
+  reject  [,] -> [;]
+  reject  [] -> [ are]
+PARAGRAPH Table 4 Inventory of route R0, the operations exemplified in
+  reject  [carries] -> [has]
+  reject  [carries] -> [involves]
+  reject  [] -> [ reactions]
+  reject  [the] -> [a]
+  reject  [the] -> [a]
+  reject  [the] -> [a]
+  accept  [ ] -> []
+  reject  [carries] -> [involves]
+  accept  [] -> [,]
+  reject  [formation] -> [forms]
+  accept  [non-compliant] -> [noncompliant]
+PARAGRAPH Route R0 carries 11 flag instances in 8 distinct flags, dist
+  reject  [carries] -> [has]
+  reject  [:] -> [;]
+  accept  [lyophilisation] -> [lyophilization]
+  reject  [,] -> [:]
+  reject  [R0's] -> [The]
+  reject  [] -> [ of R0]
+  reject  [,] -> [;]
+  reject  [;] -> [,]
+  accept  [,] -> []
+PARAGRAPH Two relations hold in every case tested (Table 5, Fig. 2). F
+  reject  [is] -> [are]
+  reject  [,] -> [;]
+  reject  [so] -> [thus]
+  reject  [the] -> [accordance]
+  reject  [accounting of] -> [with]
+  reject  [] -> [’s instructions]
+PARAGRAPH None of the routes is convergent in the sense that matters f
+  reject  [Box] -> [The]
+  reject  [colour] -> [box color]
+  reject  [] -> [ the]
+  accept  [ ] -> []
+  accept  [lyophilisation] -> [lyophilization]
+  reject  [burden] -> [burdens]
+PARAGRAPH Fig. 2 Routes R0, R1 and R2 as step sequences. Box colour is
+  accept  [prioritisation] -> [prioritization]
+PARAGRAPH 3.5 Risk register and sensitivity of its prioritisation
+  reject  [have] -> [had]
+  accept  [crystallisation] -> [crystallization]
+  reject  [the ] -> []
+  reject  [keeps a top-three position] -> [remains]
+  reject  [about] -> [the top three positions in approximately]
+  accept  [ ] -> []
+  accept  [ ] -> []
+  reject  [the ] -> []
+  reject  [] -> [; thus]
+  reject  [ so] -> []
+PARAGRAPH Of the twelve risks, 6 have a baseline score of at least 12 
+  reject  [] -> [ is considered]
+  reject  [:] -> [;]
+  reject  [] -> [ does]
+  reject  [needs] -> [requires]
+  reject  [and so] -> [as]
+  accept  [prioritisation] -> [prioritization]
+  accept  [] -> [,]
+  reject  [stay] -> [remain]
+  accept  [ ] -> []
+  reject  [] -> [ the]
+  accept  [ ] -> []
+  accept  [about] -> [approximately]
+  accept  [ ] -> []
+  accept  [ ] -> []
+  reject  [supports] -> [support]
+  reject  [examining] -> [the examination of]
+PARAGRAPH Three checks ask what it would take to reverse the findings.
+  reject  [] -> [a ]
+  reject  [] -> [a ]
+PARAGRAPH 4.1 Pramipexole as benchmark, not as source of fragments
+  reject  [took] -> [involved the use of]
+  accept  [,] -> []
+  accept  [] -> [,]
+PARAGRAPH The idea that prompted this study took pramipexole as a temp
+  reject  [-] -> [ ]
+PARAGRAPH 4.2 Convergence is a property of the starting-material bound
+  reject  [Where] -> [When]
+  reject  [, that GMP applies from their first use] -> []
+  accept  [judgement] -> [judgment]
+PARAGRAPH An argument for modular synthesis is that fragments made in 
+  reject  [exemplified] -> [example]
+  reject  [carries] -> [has]
+  reject  [carries] -> [has]
+  reject  [] -> [ has]
+  reject  [Class] -> [class]
+  accept  [,] -> []
+  reject  [besides] -> [in addition to]
+  reject  [Class] -> [class]
+  accept  [] -> [,]
+  reject  [by] -> [with]
+  reject  [carries] -> [contains]
+  accept  [,] -> []
+  reject  [moves the question to] -> [addresses]
+  reject  [ a] -> []
+  accept  [crystallisation] -> [crystallization]
+  accept  [] -> [,]
+  accept  [,] -> []
+PARAGRAPH The trade-off in Table 5 is the central finding of the case 
+  reject  [] -> [ the]
+  reject  [exists] -> [exist]
+  accept  [ ] -> []
+  reject  [Supply] -> [The supply]
+  accept  [,] -> []
+PARAGRAPH No manufacturing cost is estimated. A defensible estimate wo
+  reject  [stage] -> [Stage]
+  accept  [programme] -> [program]
+PARAGRAPH Table 7 Principal actionable output: stage-gated experimenta
+  reject  [is] -> [shows]
+  reject  [output] -> [outputs]
+  accept  [programme] -> [program]
+  reject  [-] -> [ ]
+  accept  [,] -> []
+  accept  [,] -> []
+  reject  [ a] -> []
+PARAGRAPH Table 7 is the principal actionable output of the framework.
+  accept  [,] -> []
+PARAGRAPH 4.6 A reusable workflow, and what the method does not do
+  reject  [done] -> [performed]
+  reject  [done] -> [performed]
+PARAGRAPH No new chemical transformation is proposed. The contribution
+  reject  [carries] -> [has]
+  reject  [,] -> [:]
+  reject  [the] -> [The]
+  reject  [] -> [ is]
+  reject  [] -> [and ]
+  reject  [] -> [ is]
+  reject  [declaring] -> [declare]
+PARAGRAPH The method does not select the best route. A route is not be
+  reject  [gave] -> [gives]
+  reject  [] -> [in ]
+  reject  [] -> [ been]
+  accept  [,] -> []
+  accept  [organise] -> [organize]
+PARAGRAPH Return to the four requirements of Section 2.7. Traceability
+  accept  [] -> [,]
+  reject  [made] -> [performed]
+  accept  [] -> [,]
+  reject  [record] -> [records]
+  reject  [abstract] -> [abstracts]
+  reject  [ the] -> []
+  reject  [the ] -> []
+PARAGRAPH No synthesis was performed and no yield, impurity profile, s
+  reject  [The] -> [This]
+  accept  [,] -> []
+  reject  [] -> [the ]
+  accept  [catalysed] -> [catalyzed]
+  accept  [ ] -> []
+  accept  [functionalisation] -> [functionalization]
+  accept  [,] -> []
+  accept  [crystallisation] -> [crystallization]
+  accept  [prioritisation] -> [prioritization]
+  reject  [a] -> [the]
+PARAGRAPH The paper presents a framework that converts public informat
+  reject  [Declarations] -> [declarations]
+PARAGRAPH Statements and Declarations
+  reject  [] -> [ that there are]
+PARAGRAPH Competing interests. The author declares no competing intere
+  accept  [conceptualisation] -> [conceptualization]
+  accept  [visualisation] -> [visualization]
+PARAGRAPH Author contributions. Leon Sandler: conceptualisation, metho
+SKIP reference entry | [2] Wei ZY, Brown W, Takasaki B, Plobeck N, Delorme D, Zhou 
+SKIP reference entry | [24] Bastin RJ, Bowker MJ, Slater BJ. Salt Selection and Opt
+SKIP reference entry | [32] Alfonsi K, Colberg J, Dunn PJ, Fevig T, Jennings S, Joh
+SKIP reference entry | Crystallisation as the impurity-purging step in place of pre
+SKIP reference entry | 2 d / 16 %
+SKIP reference entry | Reaction time of two days and reported isolated yield of 16 
+SKIP reference entry | Lyophilisation and drying at 80 °C for three days to isolate
+SKIP reference entry | WO2016/099393 Example IV couples tert-butyl 4-{bromo[4-(dime
+SKIP reference entry | Large-scale palladium-catalysed couplings and removal of res
+SKIP reference entry | Whether the PN6047 core (two amides, a basic piperidine) all
+SKIP reference entry | The starting material named in the machine-readable text of 
+SKIP reference entry | WO2016/099393 Example Ib: 40 mg of the secondary amine and 1
+SKIP reference entry | 1,2-dichloroethane is an ICH Q3C Class 1 solvent. A change t
+SKIP reference entry | WO2022/013153 describes crystalline Forms HCl2 and HCl3 of t
+SKIP reference entry | Crystallisation as the main impurity-purging step (replacing
+SKIP reference entry | TFA / CH2Cl2, rt, 1 h 15 min; evaporated (Example V)
+SKIP reference entry | 40 mg (0.11 mmol); 8.2 mg isolated (16 %)
+SKIP reference entry | Cl1, Cl2, HPLC, 2 d, 16 %
+SKIP reference entry | amorphous HCl salt by lyophilisation from TFE/water with aqu
+SKIP reference entry | Construction / concession steps (disclosed or proposed)
+SKIP reference entry | 3 / 2
+SKIP reference entry | 2 / 2
+SKIP reference entry | 2 / 1
+SKIP reference entry | Impurity profile and purge when crystallisation replaces pre
+SKIP reference entry | Screen catalyst, base, solvent and temperature of the Suzuki
+SKIP reference entry | Remove the Boc group with HCl in a Class 3 solvent and isola
+SKIP reference entry | Whether an isolated intermediate improves purge of coupling 
+SKIP reference entry | Crystallise the hydrochloride (Form HCl2 solvents from the p
+SKIP reference entry | Whether crystallisation alone purges impurities and delivers
+SKIP reference entry | Impurity mapping by LC-MS across all stages; spiking and pur

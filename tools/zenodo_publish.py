@@ -28,7 +28,7 @@ TAG = "v" + VERSION
 DRY = "--dry" in sys.argv
 GITHUB = "https://github.com/sandlerleon/pn6047-route-design"
 CREATORS = [{"name": "Sandler, Leon", "affiliation": "Independent Researcher", "orcid": "0009-0007-4584-808X"}]
-TITLE_PAPER = "An Evidence-Graded Framework for Pharmaceutical Route Selection and Process-Risk Prioritisation: A PN6047 Case Study"
+TITLE_PAPER = "An Evidence-Graded Framework for Pharmaceutical Route Selection and Process-Risk Prioritization: A PN6047 Case Study"
 TITLE_CODE = "PN6047 route-design screening: evidence-graded route inventories, flags, risk register, model code and manuscript"
 KEYWORDS = ["PN6047", "pharmaceutical process development", "synthetic route design", "drug substance manufacturing", "evidence grading",
             "process risk assessment", "sensitivity analysis", "delta opioid receptor agonist", "ICH Q11", "Suzuki-Miyaura coupling", "reductive amination"]
@@ -51,6 +51,7 @@ NOTES = {"1.1.0": "Reframed as an evidence-graded framework with PN6047 as the c
                   "reusable nine-step workflow (Section 4.6), and a statement that the journal precedents were assessed from record and abstract. 'Monte Carlo' language replaced by "
                   "sensitivity of risk prioritisation to rating uncertainty. Numbers of the original analysis are unchanged."}
 NEWVER = "<p><strong>Version %s.</strong> " + NOTES.get(VERSION, "Revised.") + "</p>"
+NOTES_MS = {"3": "Language edit (Rubriq) merged selectively into the manuscript: American spelling, number formatting and comma edits only; no change to results, numbers or claims. A copy without line numbers is included for ChemRxiv."}
 
 
 def clear_inherited(d):
@@ -116,10 +117,10 @@ def preprint():
     d = st["publication_v" + MS] if "publication_v" + MS in st else st["publication"]
     print("=== preprint draft %s (reserved DOI %s)" % (d["id"], d["doi"]))
     clear_inherited(d)
-    for name in ("PN6047_Route_Design_v%s.docx" % MS, "PN6047_Route_Design_v%s.pdf" % MS):
+    for name in ("PN6047_Route_Design_v%s.docx" % MS, "PN6047_Route_Design_v%s.pdf" % MS, "PN6047_Route_Design_v%s_ChemRxiv.docx" % MS):
         upload(d["bucket"], os.path.join(REPO, "manuscript", name), name)
     meta = {"title": TITLE_PAPER, "upload_type": "publication", "publication_type": "preprint",
-            "description": (NEWVER % ("v" + MS) if MS != "1" else "") + DESC_PAPER.replace("{SW}", st.get("software_" + VERSION, st["software"])["doi"]), "creators": CREATORS, "keywords": KEYWORDS, "access_right": "open",
+            "description": ("<p><strong>Version v%s.</strong> %s</p>" % (MS, NOTES_MS.get(MS, NOTES.get(VERSION, "Revised."))) if MS != "1" else "") + DESC_PAPER.replace("{SW}", st.get("software_" + VERSION, st["software"])["doi"]), "creators": CREATORS, "keywords": KEYWORDS, "access_right": "open",
             "license": "cc-by-4.0", "version": MS, "language": "eng", "prereserve_doi": {"doi": d["doi"]},
             "related_identifiers": [{"identifier": st.get("software_" + VERSION, st["software"])["doi"], "relation": "isSupplementedBy", "scheme": "doi"},
                                     {"identifier": GITHUB, "relation": "isSupplementedBy", "scheme": "url"}]}

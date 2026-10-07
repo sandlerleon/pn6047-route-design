@@ -25,9 +25,10 @@ REFS = json.load(open(os.path.join(ROOT, "refs", "refs_cache.json"), encoding="u
 ZEN = json.load(open(os.path.join("C:" + os.sep, "YouTube", "_pn6047_zenodo_state.json"))) if os.path.exists(
     os.path.join("C:" + os.sep, "YouTube", "_pn6047_zenodo_state.json")) else None
 SW_DOI = (ZEN.get("software_1.1.0") or ZEN["software"])["doi"] if ZEN else "10.5281/zenodo.XXXX"
-PP_DOI = (ZEN.get("publication_v2") or ZEN["publication"])["doi"] if ZEN else "10.5281/zenodo.YYYY"
+PP_DOI = (ZEN.get("publication_v3") or ZEN.get("publication_v2") or ZEN["publication"])["doi"] if ZEN else "10.5281/zenodo.YYYY"
 REPO = "https://github.com/sandlerleon/pn6047-route-design"
-VERSION = os.environ.get("MS_VERSION", "2")
+VERSION = os.environ.get("MS_VERSION", "3")
+NOLN = os.environ.get("NO_LINENUM") == "1"          # ChemRxiv copy: no line numbers
 
 # ---------------------------------------------------------------- numbers from the model
 D = {k: v["default"] for k, v in RES["routes"].items()}
@@ -113,7 +114,7 @@ def sub(text):
 
 
 doc = H.new_document(size=11, line=1.5)
-H.page_numbers_and_line_numbers(doc)
+H.page_numbers_and_line_numbers(doc, line_numbers=not NOLN)
 
 
 def P(text, **kw):
@@ -138,7 +139,7 @@ def TAB(rows, caption, widths=None, size=8, label=None):
     H.table(doc, [[cites(sub(c)) for c in r] for r in rows], widths=widths, size=size)
 
 
-TITLE = "An Evidence-Graded Framework for Pharmaceutical Route Selection and Process-Risk Prioritisation: A PN6047 Case Study"
+TITLE = "An Evidence-Graded Framework for Pharmaceutical Route Selection and Process-Risk Prioritization: A PN6047 Case Study"
 p = doc.add_paragraph()
 H.add_rich(p, TITLE, size=16, bold=True)
 for line in ("Leon Sandler", "Independent researcher, Northbrook, Illinois, USA", "Corresponding author: sandler.leon@gmail.com",
@@ -158,7 +159,7 @@ ABS = [
                 "evidence-weighted validation burden; and a twelve-item risk register was ranked, with the sensitivity of the prioritisation to the author-assigned ratings tested by perturbation."),
     ("Results", "The exemplified route (milligram to gram scale; final N-functionalisation isolated in 16 % by preparative HPLC) carries @f0@ documented flags, including an ICH Q3C "
                 "Class 1 solvent, palladium and a benzotriazole-derived coupling reagent. Variants R1 and R2 carry @f1@ flags each but a higher validation burden (@b1@ and @b2@ "
-                "against @b0@, linear scale): fewer documented flags did not mean lower development uncertainty. Impurity purge when crystallisation replaces chromatography, and "
+                "against @b0@, linear scale): fewer documented flags did not mean lower development uncertainty. Two risks, impurity purge when crystallisation replaces chromatography and "
                 "the undisclosed route to the vinyl bromide, stayed in the top three in about @p1@ % of perturbations, conditional on the initial risk model."),
     ("Conclusion", "The framework converts public route information into an auditable experimental-prioritisation strategy while explicitly separating documented process "
                    "liabilities from unvalidated alternatives. It does not select a best route; it shows where the evidence is strong or assumed and which experiments carry the "
@@ -516,7 +517,7 @@ for k in CITE:
 # ---------------------------------------------------------------- figure numbering tokens and output
 doc.core_properties.author = "Leon Sandler"
 doc.core_properties.title = TITLE
-outp = os.path.join(OUT, "PN6047_Route_Design_v%s.docx" % VERSION)
+outp = os.path.join(OUT, "PN6047_Route_Design_v%s%s.docx" % (VERSION, "_ChemRxiv" if NOLN else ""))
 doc.save(outp)
 json.dump(TLAB_NEW, open(LABFILE, "w"))
 text_words = 0

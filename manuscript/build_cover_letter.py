@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cover letter for the submission to the Journal of Pharmaceutical Innovation (original submission); numbers read from results/results.json.
 
-    python build_cover_letter.py     ->  out/Cover_Letter_JPI_v2.docx
+    python build_cover_letter.py     ->  out/Cover_Letter_JPI_v3.docx
 """
 import json
 import os
@@ -15,10 +15,10 @@ import docx_helpers as H  # noqa: E402
 
 R = json.load(open(os.path.join(HERE, "..", "results", "results.json"), encoding="utf-8"))
 ZEN = json.load(open(os.path.join("C:" + os.sep, "YouTube", "_pn6047_zenodo_state.json")))
-SW, PP = ZEN["software_1.1.0"]["doi"], ZEN["publication_v2"]["doi"]
+SW, PP = ZEN["software_1.1.0"]["doi"], ZEN["publication_v3"]["doi"]
 REPO = "https://github.com/sandlerleon/pn6047-route-design"
 D = {k: v["default"] for k, v in R["routes"].items()}
-TITLE = "An Evidence-Graded Framework for Pharmaceutical Route Selection and Process-Risk Prioritisation: A PN6047 Case Study"
+TITLE = "An Evidence-Graded Framework for Pharmaceutical Route Selection and Process-Risk Prioritization: A PN6047 Case Study"
 doc = H.new_document(size=11, line=1.15)
 
 
@@ -73,6 +73,6 @@ para("All inputs, model code, tests and figure scripts are public at %s and arch
 para("Thank you for considering the paper.")
 para("Yours sincerely,", after=18)
 para("Leon Sandler")
-out = os.path.join(HERE, "out", "Cover_Letter_JPI_v2.docx")
+out = os.path.join(HERE, "out", "Cover_Letter_JPI_v3.docx")
 doc.save(out)
 print("saved", out)

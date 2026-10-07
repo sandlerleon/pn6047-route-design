@@ -1,10 +1,10 @@
-# An evidence-graded framework for pharmaceutical route selection and process-risk prioritisation: a PN6047 case study
+# An evidence-graded framework for pharmaceutical route selection and process-risk prioritization: a PN6047 case study
 
 Leon Sandler, Independent Researcher — sandler.leon@gmail.com
 ORCID [0009-0007-4584-808X](https://orcid.org/0009-0007-4584-808X)
 
 This repository holds the data, screening model, tests, figure scripts and manuscript builder behind the paper *"An Evidence-Graded Framework for Pharmaceutical
-Route Selection and Process-Risk Prioritisation: A PN6047 Case Study"* (prepared for the **Journal of Pharmaceutical Innovation**). The contribution is the
+Route Selection and Process-Risk Prioritization: A PN6047 Case Study"* (prepared for the **Journal of Pharmaceutical Innovation**). The contribution is the
 reusable framework; PN6047 is the case study. Version 1.1.0 reframes the earlier PN6047-specific paper accordingly. Every number and figure of the manuscript
 is produced by the scripts here from the plain JSON inputs in `data/`.
 
@@ -68,6 +68,6 @@ class of that example is used.
 ## Citation
 
 Software v1.1.0: [10.5281/zenodo.23200725](https://doi.org/10.5281/zenodo.23200725) (concept DOI 10.5281/zenodo.23200173; v1.0.0 is 10.5281/zenodo.23200174).
-Manuscript preprint v2: [10.5281/zenodo.23200726](https://doi.org/10.5281/zenodo.23200726) (concept DOI 10.5281/zenodo.23200177; v1 is 10.5281/zenodo.23200178).
+Manuscript preprint v3: [10.5281/zenodo.23201405](https://doi.org/10.5281/zenodo.23201405) (concept DOI 10.5281/zenodo.23200177; v2 is 10.5281/zenodo.23200726, v1 is 10.5281/zenodo.23200178). v3 is v2 with a language edit merged selectively (American spelling, number formatting, commas; no change to results) plus a copy without line numbers for ChemRxiv (`manuscript/PN6047_Route_Design_v3_ChemRxiv.docx`).
 
 MIT licence.
