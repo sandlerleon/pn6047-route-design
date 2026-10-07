@@ -1,0 +1,21 @@
+FULL-TEXT VERIFICATION CHECKLIST (precedents graded B and C)
+============================================================
+The manuscript states that journal precedents were assessed from the Crossref / Europe PMC record and abstract, because the full texts were not accessible
+(paywalled or blocked). If you have access (library, publisher site, author request), tick each item and, where it fails, change the class in data/precedents.json
+and data/routes.json, rerun code/route_model.py and the manuscript builder, and remove the sentence in Section 2.2 / 4.7 that says the full text was not examined.
+
+For each paper confirm:  (a) the transformation named in the precedent map is actually reported;  (b) the scaffold / substrate class matches what the manuscript says;
+(c) the conditions the manuscript treats as "inferred" (solvent, reagent, catalyst) are reported or are NOT claimed.
+
+[ ] Wei ZY et al. 2000, J Med Chem (diarylmethylpiperazines / piperidine analogues of SNC-80):
+      two approaches to the vinyl bromide / alkene - benzhydryl alcohol dehydration; Suzuki coupling of vinyl bromides (Section 2.5, class B upstream block)
+[ ] Qian et al. 2010 (continuous-flow synthesis of a close analogue): confirm which steps are in flow and what the scaffold is (class B, Suzuki of vinyl bromide)
+[ ] Abdel-Magid et al. 1996, J Org Chem (NaBH(OAc)3 reductive amination): confirm DCE preferred, THF and MeCN described as alternatives (class C, R1 solvent swap)
+[ ] Isidro-Llobet et al. 2009, Chem Rev (protecting groups): Boc removal with HCl in a Class 3 solvent (class C)
+[ ] Dunetz et al. 2016, Org Process Res Dev (large-scale amide formation): coupling-reagent hazards and alternatives (class C)
+[ ] Wehrstedt et al. 2005, J Hazard Mater: explosive properties of HOBt (confirm HOAt-type statement is not over-extended)
+[ ] Garrett & Prasad 2004; Galaffu et al. 2007: palladium removal methods (class C)
+[ ] Schneider/Niu/Kempf (pramipexole, thiazole drugs, ritonavir): used only for the correction of the pramipexole mapping and for the thiazol-5-ylmethyl unit
+[ ] Bastin et al. 2000, Federsel 2009, Carey et al. 2006, Brown & Bostrom 2016, Blakemore 2018, Vitaku 2014: general premise statements (Stage 0)
+
+Read in full by the author (no action needed): WO 2016/099393; WO 2022/013153; ICH Q3A(R2), Q3C(R8), Q3D(R2), Q11.

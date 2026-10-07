@@ -3,7 +3,7 @@
 
 No chemistry is simulated and no yield, cost or impurity level is predicted. The model counts and classifies the operations of three
 route inventories (R0 as exemplified in the public patent record, R1 and R2 proposed), applies documented flags, weights the evidence class of the
-conditions under three weighting schemes, and tests how stable the ranking of an expert-judgement risk register is to +/-1 perturbations of its ratings.
+conditions under three weighting schemes, and tests how stable the ranking of an author-assigned-rating risk register is to +/-1 perturbations of its ratings.
 
     python route_model.py        ->  ../results/results.json
 """
@@ -89,6 +89,64 @@ def risk_stability(risks, rng):
     return out, order
 
 
+def break_even(routes_by_u):
+    """Exchange rate between documented flags and validation burden. For S(lam) = flags + lam * burden, the weight lam* at which two routes score
+    equally; a route with more flags and less burden is preferred below lam*, the other above it. Reported for each weighting scheme and each u."""
+    out = {}
+    for sc in WEIGHTS:
+        out[sc] = {}
+        for u, rr in routes_by_u.items():
+            f = {k: rr[k]["flag_instances"] for k in rr}
+            b = {k: rr[k]["validation_burden"][sc] for k in rr}
+            d = {}
+            for x, y in (("R0", "R1"), ("R0", "R2"), ("R1", "R2")):
+                if b[x] != b[y]:
+                    d["%s_vs_%s" % (x, y)] = (f[x] - f[y]) / (b[y] - b[x])
+                else:
+                    d["%s_vs_%s" % (x, y)] = None
+            out[sc][u] = d
+    return out
+
+
+def reversal(risks):
+    """Smallest total change of ratings (|dL| + |dI|, integers 1-5) that brings each of the two leading risks down to the score of the
+    next cluster, and that brings a member of that cluster up to the score of the leaders."""
+    sc = {r["id"]: r["L"] * r["I"] for r in risks}
+    order = sorted(sc, key=lambda k: (-sc[k], k))
+    lead = order[:2]
+    nxt = max(sc[k] for k in order[2:])
+    top = max(sc.values())
+
+    def least(r, cond):
+        best = None
+        for L in range(1, 6):
+            for I in range(1, 6):
+                if cond(L * I):
+                    c = abs(L - r["L"]) + abs(I - r["I"])
+                    best = c if best is None or c < best else best
+        return best
+    by = {r["id"]: r for r in risks}
+    down = {k: least(by[k], lambda v: v <= nxt) for k in lead}
+    cluster = [k for k in order[2:] if sc[k] == nxt]
+    up = {k: least(by[k], lambda v: v >= top) for k in cluster}
+    return {"leaders": lead, "leader_score": top, "cluster_score": nxt, "points_to_bring_leader_to_cluster": down,
+            "cluster": cluster, "points_to_bring_cluster_member_to_leader": up}
+
+
+PRIORS = {"narrow": ([-1, 0, 1], [0.1, 0.8, 0.1]), "base": ([-1, 0, 1], [0.25, 0.5, 0.25]), "wide": ([-2, -1, 0, 1, 2], [0.2, 0.2, 0.2, 0.2, 0.2])}
+
+
+def risk_stability_prior(risks, rng, steps, probs):
+    L = np.array([r["L"] for r in risks])
+    I = np.array([r["I"] for r in risks])
+    d = rng.choice(steps, size=(N_MC, len(risks), 2), p=probs)
+    Ls = np.clip(L + d[:, :, 0], 1, 5)
+    Is = np.clip(I + d[:, :, 1], 1, 5)
+    sc = Ls * Is + rng.random(Ls.shape) * 1e-6
+    rank = (-sc).argsort(axis=1).argsort(axis=1) + 1
+    return {r["id"]: float((rank[:, j] <= 3).mean()) for j, r in enumerate(risks)}
+
+
 def main():
     routes = load("routes.json")
     risks = load("risks.json")["risks"]
@@ -108,6 +166,11 @@ def main():
     rng = np.random.default_rng(SEED)
     stab, order = risk_stability(risks, rng)
     res["risks"] = stab
+    res["break_even"] = break_even({u: {k: res["routes"][k]["u_sweep"][u] for k in res["routes"]} for u in routes["undisclosed_upstream"]["u_range"] and [str(x) for x in routes["undisclosed_upstream"]["u_range"]]})
+    res["reversal"] = reversal(risks)
+    res["priors"] = {}
+    for name, (st_, pr_) in PRIORS.items():
+        res["priors"][name] = risk_stability_prior(risks, np.random.default_rng(SEED + 1), st_, pr_)
     res["risk_order_by_score"] = order
     # the share of the 12 risks that rate 'high' (score >= 12) at the baseline ratings
     res["n_high_risks"] = sum(1 for k in stab if stab[k]["score"] >= 12)

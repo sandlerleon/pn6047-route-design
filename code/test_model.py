@@ -51,6 +51,14 @@ res = json.loads(b)
 d = res["routes"]
 check("R1 carries no Class 1 solvent flag and R0 does", d["R1"]["default"]["flags"]["Q3C1_solvent"] == 0 and d["R0"]["default"]["flags"]["Q3C1_solvent"] == 1)
 check("flag instances: R0 > R1 for every u in the sweep", all(d["R0"]["u_sweep"][u]["flag_instances"] > d["R1"]["u_sweep"][u]["flag_instances"] for u in d["R0"]["u_sweep"]))
+be = res["break_even"]
+check("break-even: R1 dominates R2 (equal flags, lower burden) under every weighting and u", all(be[w][u]["R1_vs_R2"] == 0 for w in be for u in be[w]))
+check("break-even R0 vs R1 recomputed by hand (linear, u=2): (11-3)/(11-2) = 8/9", abs(be["linear"]["2"]["R0_vs_R1"] - 8 / 9) < 1e-12)
+rv = res["reversal"]
+check("reversal: leaders K1,K2 need 2 rating points to fall to the next cluster, and cluster members 2 to rise", rv["leaders"] == ["K1", "K2"] and set(rv["points_to_bring_leader_to_cluster"].values()) == {2} and set(rv["points_to_bring_cluster_member_to_leader"].values()) == {2})
+pr = res["priors"]
+check("prior sensitivity: leaders keep the highest top-3 share under all three rating distributions", all(min(p["K1"], p["K2"]) > max(v for k, v in p.items() if k not in ("K1", "K2")) for p in pr.values()))
+check("prior sensitivity: widening the distribution lowers the leaders' share", pr["narrow"]["K1"] > pr["base"]["K1"] > pr["wide"]["K1"])
 check("monte-carlo probabilities lie in [0,1]", all(0 <= v["p_top3"] <= 1 for v in res["risks"].values()))
 print("\n%s" % ("ALL CHECKS PASSED" if not FAILS else "%d FAILED: %s" % (len(FAILS), ", ".join(FAILS))))
 sys.exit(1 if FAILS else 0)

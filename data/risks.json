@@ -1,5 +1,5 @@
 {
- "_comment": "Risk register for route R1 (and R2 where stated). Likelihood (L) and impact (I) are the author's expert-judgement ratings on a 1-5 scale; they are not measurements. code/route_model.py perturbs every rating by -1/0/+1 (probabilities 0.25/0.50/0.25) to test how stable the ranking is.",
+ "_comment": "Risk register for route R1 (and R2 where stated). Likelihood (L) and impact (I) are author-assigned ratings based on the evidence inventory on a 1-5 scale; they are not measurements. code/route_model.py perturbs every rating by -1/0/+1 (probabilities 0.25/0.50/0.25) to test how stable the ranking is.",
  "risks": [
   {"id": "K1", "name": "Impurity profile and purge when crystallisation replaces preparative HPLC", "L": 4, "I": 5,
    "basis": "The only disclosed purification of the N-functionalised product is preparative HPLC (WO2016/099393 Example Ib); crystallisation as the purging step is not demonstrated (R1-salt, condition evidence D).",

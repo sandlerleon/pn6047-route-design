@@ -211,7 +211,7 @@ def fig3():
     b.set_yticks(y)
     b.set_yticklabels(["%s  (L×I = %d)" % (k, risks[k]["score"]) for k in order], fontsize=7)
     b.set_xlim(0, 1.0)
-    b.set_xlabel("Probability of ranking in the top 3 / top 5\nunder ±1 perturbation of every rating")
+    b.set_xlabel("Share of draws ranking in the top 3 / top 5\nunder ±1 perturbation of every rating")
     b.legend(frameon=False, fontsize=7, loc="lower right")
     b.text(-0.02, 1.04, "b", transform=b.transAxes, fontsize=10, weight="bold")
     for ax in (a, b):
