@@ -1,0 +1,863 @@
+{
+ "seed": 20261006,
+ "n_monte_carlo": 20000,
+ "weights": {
+  "linear": {
+   "A": 0,
+   "B": 1,
+   "C": 2,
+   "D": 3
+  },
+  "convex": {
+   "A": 0,
+   "B": 1,
+   "C": 3,
+   "D": 9
+  },
+  "binary_D": {
+   "A": 0,
+   "B": 0,
+   "C": 0,
+   "D": 1
+  }
+ },
+ "upstream_evidence": {
+  "R0": "B",
+  "R1": "B",
+  "R2": "D"
+ },
+ "default_u": 2,
+ "structure_checks": {
+  "PN6047 (Example Ib)": {
+   "formula": "C26H28N4O2S",
+   "mw": 460.6,
+   "mh_calc": 461.201,
+   "ms_patent": 461,
+   "agrees_to_integer": true
+  },
+  "Example Ia (6-CF3-pyridin-3-ylmethyl)": {
+   "formula": "C29H29F3N4O2",
+   "mw": 522.57,
+   "mh_calc": 523.232,
+   "ms_patent": 523,
+   "agrees_to_integer": true
+  },
+  "Example Ic (4-methylimidazol-5-ylmethyl)": {
+   "formula": "C27H31N5O2",
+   "mw": 457.58,
+   "mh_calc": 458.255,
+   "ms_patent": 458,
+   "agrees_to_integer": true
+  }
+ },
+ "routes": {
+  "R0": {
+   "name": "R0 - route as exemplified in the public patent record (discovery scale)",
+   "default": {
+    "steps_total": 7,
+    "longest_linear_sequence": 7,
+    "in_house_convergent_steps": 0,
+    "disclosed_or_proposed_steps": 5,
+    "undisclosed_upstream_steps": 2,
+    "construction_steps": 3,
+    "concession_steps": 2,
+    "ideality": 0.6,
+    "flags": {
+     "Q3C1_solvent": 1,
+     "Q3C2_solvent": 4,
+     "Pd_catalyst": 1,
+     "BTZ_reagent": 1,
+     "Prep_HPLC": 1,
+     "Long_reaction": 1,
+     "Low_reported_yield": 1,
+     "Lyophilisation_long_drying": 1
+    },
+    "flag_instances": 11,
+    "distinct_flags": 8,
+    "steps_with_any_flag": 5,
+    "ops_evidence": {
+     "A": 5,
+     "B": 0,
+     "C": 0,
+     "D": 0
+    },
+    "cond_evidence": {
+     "A": 5,
+     "B": 0,
+     "C": 0,
+     "D": 0
+    },
+    "validation_burden": {
+     "linear": 2,
+     "convex": 2,
+     "binary_D": 0
+    }
+   },
+   "u_sweep": {
+    "1": {
+     "steps_total": 6,
+     "longest_linear_sequence": 6,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 5,
+     "undisclosed_upstream_steps": 1,
+     "construction_steps": 3,
+     "concession_steps": 2,
+     "ideality": 0.6,
+     "flags": {
+      "Q3C1_solvent": 1,
+      "Q3C2_solvent": 4,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 1,
+      "Prep_HPLC": 1,
+      "Long_reaction": 1,
+      "Low_reported_yield": 1,
+      "Lyophilisation_long_drying": 1
+     },
+     "flag_instances": 11,
+     "distinct_flags": 8,
+     "steps_with_any_flag": 5,
+     "ops_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "validation_burden": {
+      "linear": 1,
+      "convex": 1,
+      "binary_D": 0
+     }
+    },
+    "2": {
+     "steps_total": 7,
+     "longest_linear_sequence": 7,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 5,
+     "undisclosed_upstream_steps": 2,
+     "construction_steps": 3,
+     "concession_steps": 2,
+     "ideality": 0.6,
+     "flags": {
+      "Q3C1_solvent": 1,
+      "Q3C2_solvent": 4,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 1,
+      "Prep_HPLC": 1,
+      "Long_reaction": 1,
+      "Low_reported_yield": 1,
+      "Lyophilisation_long_drying": 1
+     },
+     "flag_instances": 11,
+     "distinct_flags": 8,
+     "steps_with_any_flag": 5,
+     "ops_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "validation_burden": {
+      "linear": 2,
+      "convex": 2,
+      "binary_D": 0
+     }
+    },
+    "3": {
+     "steps_total": 8,
+     "longest_linear_sequence": 8,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 5,
+     "undisclosed_upstream_steps": 3,
+     "construction_steps": 3,
+     "concession_steps": 2,
+     "ideality": 0.6,
+     "flags": {
+      "Q3C1_solvent": 1,
+      "Q3C2_solvent": 4,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 1,
+      "Prep_HPLC": 1,
+      "Long_reaction": 1,
+      "Low_reported_yield": 1,
+      "Lyophilisation_long_drying": 1
+     },
+     "flag_instances": 11,
+     "distinct_flags": 8,
+     "steps_with_any_flag": 5,
+     "ops_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "validation_burden": {
+      "linear": 3,
+      "convex": 3,
+      "binary_D": 0
+     }
+    },
+    "4": {
+     "steps_total": 9,
+     "longest_linear_sequence": 9,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 5,
+     "undisclosed_upstream_steps": 4,
+     "construction_steps": 3,
+     "concession_steps": 2,
+     "ideality": 0.6,
+     "flags": {
+      "Q3C1_solvent": 1,
+      "Q3C2_solvent": 4,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 1,
+      "Prep_HPLC": 1,
+      "Long_reaction": 1,
+      "Low_reported_yield": 1,
+      "Lyophilisation_long_drying": 1
+     },
+     "flag_instances": 11,
+     "distinct_flags": 8,
+     "steps_with_any_flag": 5,
+     "ops_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 5,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "validation_burden": {
+      "linear": 4,
+      "convex": 4,
+      "binary_D": 0
+     }
+    }
+   }
+  },
+  "R1": {
+   "name": "R1 - process-oriented variant of the same disconnections (proposed)",
+   "default": {
+    "steps_total": 6,
+    "longest_linear_sequence": 6,
+    "in_house_convergent_steps": 0,
+    "disclosed_or_proposed_steps": 4,
+    "undisclosed_upstream_steps": 2,
+    "construction_steps": 2,
+    "concession_steps": 2,
+    "ideality": 0.5,
+    "flags": {
+     "Q3C1_solvent": 0,
+     "Q3C2_solvent": 2,
+     "Pd_catalyst": 1,
+     "BTZ_reagent": 0,
+     "Prep_HPLC": 0,
+     "Long_reaction": 0,
+     "Low_reported_yield": 0,
+     "Lyophilisation_long_drying": 0
+    },
+    "flag_instances": 3,
+    "distinct_flags": 2,
+    "steps_with_any_flag": 2,
+    "ops_evidence": {
+     "A": 4,
+     "B": 0,
+     "C": 0,
+     "D": 0
+    },
+    "cond_evidence": {
+     "A": 0,
+     "B": 1,
+     "C": 1,
+     "D": 2
+    },
+    "validation_burden": {
+     "linear": 11,
+     "convex": 24,
+     "binary_D": 2
+    }
+   },
+   "u_sweep": {
+    "1": {
+     "steps_total": 5,
+     "longest_linear_sequence": 5,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 4,
+     "undisclosed_upstream_steps": 1,
+     "construction_steps": 2,
+     "concession_steps": 2,
+     "ideality": 0.5,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 1,
+      "C": 1,
+      "D": 2
+     },
+     "validation_burden": {
+      "linear": 10,
+      "convex": 23,
+      "binary_D": 2
+     }
+    },
+    "2": {
+     "steps_total": 6,
+     "longest_linear_sequence": 6,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 4,
+     "undisclosed_upstream_steps": 2,
+     "construction_steps": 2,
+     "concession_steps": 2,
+     "ideality": 0.5,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 1,
+      "C": 1,
+      "D": 2
+     },
+     "validation_burden": {
+      "linear": 11,
+      "convex": 24,
+      "binary_D": 2
+     }
+    },
+    "3": {
+     "steps_total": 7,
+     "longest_linear_sequence": 7,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 4,
+     "undisclosed_upstream_steps": 3,
+     "construction_steps": 2,
+     "concession_steps": 2,
+     "ideality": 0.5,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 1,
+      "C": 1,
+      "D": 2
+     },
+     "validation_burden": {
+      "linear": 12,
+      "convex": 25,
+      "binary_D": 2
+     }
+    },
+    "4": {
+     "steps_total": 8,
+     "longest_linear_sequence": 8,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 4,
+     "undisclosed_upstream_steps": 4,
+     "construction_steps": 2,
+     "concession_steps": 2,
+     "ideality": 0.5,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 1,
+      "C": 1,
+      "D": 2
+     },
+     "validation_burden": {
+      "linear": 13,
+      "convex": 26,
+      "binary_D": 2
+     }
+    }
+   }
+  },
+  "R2": {
+   "name": "R2 - alternative ordering: N-substituent installed before the alkene (proposed)",
+   "default": {
+    "steps_total": 5,
+    "longest_linear_sequence": 5,
+    "in_house_convergent_steps": 0,
+    "disclosed_or_proposed_steps": 3,
+    "undisclosed_upstream_steps": 2,
+    "construction_steps": 2,
+    "concession_steps": 1,
+    "ideality": 0.667,
+    "flags": {
+     "Q3C1_solvent": 0,
+     "Q3C2_solvent": 2,
+     "Pd_catalyst": 1,
+     "BTZ_reagent": 0,
+     "Prep_HPLC": 0,
+     "Long_reaction": 0,
+     "Low_reported_yield": 0,
+     "Lyophilisation_long_drying": 0
+    },
+    "flag_instances": 3,
+    "distinct_flags": 2,
+    "steps_with_any_flag": 2,
+    "ops_evidence": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 0
+    },
+    "cond_evidence": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 3
+    },
+    "validation_burden": {
+     "linear": 15,
+     "convex": 45,
+     "binary_D": 5
+    }
+   },
+   "u_sweep": {
+    "1": {
+     "steps_total": 4,
+     "longest_linear_sequence": 4,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 3,
+     "undisclosed_upstream_steps": 1,
+     "construction_steps": 2,
+     "concession_steps": 1,
+     "ideality": 0.667,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 1,
+      "B": 1,
+      "C": 1,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 3
+     },
+     "validation_burden": {
+      "linear": 12,
+      "convex": 36,
+      "binary_D": 4
+     }
+    },
+    "2": {
+     "steps_total": 5,
+     "longest_linear_sequence": 5,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 3,
+     "undisclosed_upstream_steps": 2,
+     "construction_steps": 2,
+     "concession_steps": 1,
+     "ideality": 0.667,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 1,
+      "B": 1,
+      "C": 1,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 3
+     },
+     "validation_burden": {
+      "linear": 15,
+      "convex": 45,
+      "binary_D": 5
+     }
+    },
+    "3": {
+     "steps_total": 6,
+     "longest_linear_sequence": 6,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 3,
+     "undisclosed_upstream_steps": 3,
+     "construction_steps": 2,
+     "concession_steps": 1,
+     "ideality": 0.667,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 1,
+      "B": 1,
+      "C": 1,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 3
+     },
+     "validation_burden": {
+      "linear": 18,
+      "convex": 54,
+      "binary_D": 6
+     }
+    },
+    "4": {
+     "steps_total": 7,
+     "longest_linear_sequence": 7,
+     "in_house_convergent_steps": 0,
+     "disclosed_or_proposed_steps": 3,
+     "undisclosed_upstream_steps": 4,
+     "construction_steps": 2,
+     "concession_steps": 1,
+     "ideality": 0.667,
+     "flags": {
+      "Q3C1_solvent": 0,
+      "Q3C2_solvent": 2,
+      "Pd_catalyst": 1,
+      "BTZ_reagent": 0,
+      "Prep_HPLC": 0,
+      "Long_reaction": 0,
+      "Low_reported_yield": 0,
+      "Lyophilisation_long_drying": 0
+     },
+     "flag_instances": 3,
+     "distinct_flags": 2,
+     "steps_with_any_flag": 2,
+     "ops_evidence": {
+      "A": 1,
+      "B": 1,
+      "C": 1,
+      "D": 0
+     },
+     "cond_evidence": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 3
+     },
+     "validation_burden": {
+      "linear": 21,
+      "convex": 63,
+      "binary_D": 7
+     }
+    }
+   }
+  }
+ },
+ "burden_order_least_to_most": {
+  "linear": {
+   "1": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "2": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "3": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "4": [
+    "R0",
+    "R1",
+    "R2"
+   ]
+  },
+  "convex": {
+   "1": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "2": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "3": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "4": [
+    "R0",
+    "R1",
+    "R2"
+   ]
+  },
+  "binary_D": {
+   "1": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "2": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "3": [
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "4": [
+    "R0",
+    "R1",
+    "R2"
+   ]
+  }
+ },
+ "risks": {
+  "K1": {
+   "name": "Impurity profile and purge when crystallisation replaces preparative HPLC",
+   "L": 4,
+   "I": 5,
+   "score": 20,
+   "p_top3": 0.86955,
+   "p_top5": 0.97315,
+   "mean_rank": 2.0595
+  },
+  "K2": {
+   "name": "Undisclosed upstream route to the vinyl bromide building block",
+   "L": 5,
+   "I": 4,
+   "score": 20,
+   "p_top3": 0.8703,
+   "p_top5": 0.9745,
+   "mean_rank": 2.05935
+  },
+  "K3": {
+   "name": "Palladium residue control to the ICH Q3D limit",
+   "L": 3,
+   "I": 4,
+   "score": 12,
+   "p_top3": 0.23135,
+   "p_top5": 0.4905,
+   "mean_rank": 5.86125
+  },
+  "K4": {
+   "name": "Performance of the Suzuki-Miyaura step on scale (conversion, protodebromination, boronic-acid homocoupling)",
+   "L": 3,
+   "I": 4,
+   "score": 12,
+   "p_top3": 0.23345,
+   "p_top5": 0.49155,
+   "mean_rank": 5.8705
+  },
+  "K5": {
+   "name": "Reductive amination: conversion, reaction time and solvent change from DCE",
+   "L": 3,
+   "I": 4,
+   "score": 12,
+   "p_top3": 0.2387,
+   "p_top5": 0.4981,
+   "mean_rank": 5.83885
+  },
+  "K6": {
+   "name": "Regulatory change of route after clinical supply (comparability) and starting-material designation",
+   "L": 3,
+   "I": 4,
+   "score": 12,
+   "p_top3": 0.23825,
+   "p_top5": 0.49655,
+   "mean_rank": 5.82755
+  },
+  "K7": {
+   "name": "Thermal and gas-evolution hazards (Boc cleavage, borohydride quench, coupling exotherm)",
+   "L": 2,
+   "I": 5,
+   "score": 10,
+   "p_top3": 0.075,
+   "p_top5": 0.2529,
+   "mean_rank": 7.7544
+  },
+  "K8": {
+   "name": "Control of potentially mutagenic impurities (alkylating agents, residual aldehyde)",
+   "L": 2,
+   "I": 4,
+   "score": 8,
+   "p_top3": 0.02815,
+   "p_top5": 0.12905,
+   "mean_rank": 9.0742
+  },
+  "K9": {
+   "name": "Polymorph and residual-solvent control of the hydrochloride at scale",
+   "L": 2,
+   "I": 4,
+   "score": 8,
+   "p_top3": 0.03,
+   "p_top5": 0.131,
+   "mean_rank": 9.0289
+  },
+  "K10": {
+   "name": "Supply and quality of the thiazole and aryl building blocks",
+   "L": 3,
+   "I": 3,
+   "score": 9,
+   "p_top3": 0.06265,
+   "p_top5": 0.18845,
+   "mean_rank": 8.19525
+  },
+  "K11": {
+   "name": "Compatibility of a thiazole-bearing, basic substrate with Pd coupling (route R2 only)",
+   "L": 3,
+   "I": 3,
+   "score": 9,
+   "p_top3": 0.0599,
+   "p_top5": 0.18415,
+   "mean_rank": 8.2273
+  },
+  "K12": {
+   "name": "Long-term supply concentration and geopolitical exposure for critical raw materials",
+   "L": 3,
+   "I": 3,
+   "score": 9,
+   "p_top3": 0.0627,
+   "p_top5": 0.1901,
+   "mean_rank": 8.20295
+  }
+ },
+ "risk_order_by_score": [
+  "K1",
+  "K2",
+  "K3",
+  "K4",
+  "K5",
+  "K6",
+  "K7",
+  "K10",
+  "K11",
+  "K12",
+  "K8",
+  "K9"
+ ],
+ "n_high_risks": 6
+}

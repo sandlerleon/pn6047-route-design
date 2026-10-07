@@ -1,0 +1,11 @@
+{
+ "_comment": "Documented attributes used to flag a step as written. Each flag cites the document that defines or supports it; flags are screening markers, not hazard or regulatory determinations.",
+ "Q3C1_solvent": {"label": "ICH Q3C Class 1 solvent (1,2-dichloroethane, limit 5 ppm)", "source": "ich_q3c", "verified_against": "ICH Q3C(R8) Table 1: 1,2-Dichloroethane 5 ppm"},
+ "Q3C2_solvent": {"label": "ICH Q3C Class 2 solvent in the step (e.g. DMF, DME, dichloromethane, THF, acetonitrile)", "source": "ich_q3c", "verified_against": "ICH Q3C(R8) Table 2 lists acetonitrile 4.1 mg/day, dichloromethane 6.0, 1,2-dimethoxyethane 1.0, DMF 8.8"},
+ "Pd_catalyst": {"label": "Palladium catalyst: residual metal control (ICH Q3D Class 2B, oral PDE 100 ug/day)", "source": "ich_q3d", "verified_against": "ICH Q3D(R2) summary of PDE for palladium: oral 100 ug/day"},
+ "BTZ_reagent": {"label": "Coupling reagent derived from a hydroxybenzotriazole (HOAt) unit; the class is associated with thermal/explosive hazards", "source": "wehrstedt2005", "verified_against": "Wehrstedt et al. 2005 abstract: 1-hydroxybenzotriazoles show explosive properties; HATU itself is not named in the abstract"},
+ "Prep_HPLC": {"label": "Preparative HPLC used for purification in the disclosed example", "source": "wo2016", "verified_against": "WO2016/099393 Example Ib: preparative HPLC, 25-65 % MeCN in 50 mM NH4HCO3"},
+ "Long_reaction": {"label": "Reaction time of 2 days at room temperature in the disclosed example", "source": "wo2016", "verified_against": "WO2016/099393 Example Ib"},
+ "Low_reported_yield": {"label": "Reported isolated yield 16 % (8.2 mg from 40 mg of amine)", "source": "wo2016", "verified_against": "WO2016/099393 Example Ib"},
+ "Lyophilisation_long_drying": {"label": "Lyophilisation and drying at 80 C for 3 days to isolate the amorphous salt", "source": "wo2022", "verified_against": "WO2022/013153 amorphous HCl salt example (as extracted)"}
+}

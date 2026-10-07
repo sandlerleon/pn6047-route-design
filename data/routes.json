@@ -1,0 +1,77 @@
+{
+ "_comment": "Route inventories used by code/route_model.py. 'ops_ev' = evidence class of the TRANSFORMATION for this substrate class; 'cond_ev' = evidence class of the CONDITIONS as written for the route. A = direct (PN6047 series, public record), B = close precedent (same scaffold class), C = general pharmaceutical precedent, D = hypothesis. kind: construction = forms a skeleton bond (C-C, C-N); concession = protection/deprotection/isolation. Flags are documented attributes of the step as written (see flags.json).",
+ "undisclosed_upstream": {
+  "note": "The preparation of the N-Boc vinyl bromide (tert-butyl 4-{bromo[4-(dimethylcarbamoyl)phenyl]methylidene}piperidine-1-carboxylate) is not described in the portion of WO2016/099393 examined; Wei et al. 2000 describe two general approaches to this scaffold (dehydration of benzhydryl alcohols; Suzuki coupling of a vinyl bromide). The number of upstream steps is therefore a parameter u (default 2, swept 1-4).",
+  "default_u": 2,
+  "u_range": [1, 2, 3, 4]
+ },
+ "routes": {
+  "R0": {
+   "name": "R0 - route as exemplified in the public patent record (discovery scale)",
+   "basis": "WO2016/099393 Examples III, IV, V, Ib; WO2022/013153 salt examples",
+   "steps": [
+    {"id": "R0-amide", "name": "Dimethylamide formation", "stage": 4, "kind": "construction",
+     "ops_ev": "A", "cond_ev": "A", "scale": "1.00 g (2.52 mmol)",
+     "conditions": "HATU, DIPEA, Me2NH.HCl, DMF, rt, overnight (Example III as printed)",
+     "flags": ["Q3C2_solvent", "BTZ_reagent"], "sources": ["wo2016", "dunetz2016", "wehrstedt2005"]},
+    {"id": "R0-suzuki", "name": "Suzuki-Miyaura coupling of the N-Boc vinyl bromide", "stage": 2, "kind": "construction",
+     "ops_ev": "A", "cond_ev": "A", "scale": "0.533 g (1.26 mmol)",
+     "conditions": "(3-carbamoylphenyl)boronic acid, PdCl2(dppf) 5 mol %, 2 M K2CO3, DME, 80 C, 3.5 h; crude taken on (Example IV)",
+     "flags": ["Pd_catalyst", "Q3C2_solvent"], "sources": ["wo2016", "wei2000", "magano2011"]},
+    {"id": "R0-boc", "name": "Boc removal", "stage": 2, "kind": "concession",
+     "ops_ev": "A", "cond_ev": "A", "scale": "0.630 g crude (1.36 mmol)",
+     "conditions": "TFA / CH2Cl2, rt, 1 h 15 min; evaporated (Example V)",
+     "flags": ["Q3C2_solvent"], "sources": ["wo2016", "isidro2009"]},
+    {"id": "R0-redam", "name": "N-functionalisation by reductive amination with thiazole-5-carbaldehyde", "stage": 3, "kind": "construction",
+     "ops_ev": "A", "cond_ev": "A", "scale": "40 mg (0.11 mmol); 8.2 mg isolated (16 %)",
+     "conditions": "1,3-thiazole-5-carbaldehyde, AcOH, NaBH(OAc)3, 1,2-dichloroethane, rt, 2 days; preparative HPLC (Example Ib)",
+     "flags": ["Q3C1_solvent", "Q3C2_solvent", "Prep_HPLC", "Long_reaction", "Low_reported_yield"], "sources": ["wo2016", "abdelmagid1996"]},
+    {"id": "R0-salt", "name": "Hydrochloride salt formation", "stage": 5, "kind": "concession",
+     "ops_ev": "A", "cond_ev": "A", "scale": "500.5 mg free base",
+     "conditions": "amorphous HCl salt by lyophilisation from TFE/water with aqueous HCl, dried at 80 C for 3 days; crystalline Forms HCl2/HCl3 from solvents including 2-propanol, acetone, acetonitrile, ethanol, ethyl acetate, THF (WO2022/013153)",
+     "flags": ["Lyophilisation_long_drying"], "sources": ["wo2022"]}
+   ]
+  },
+  "R1": {
+   "name": "R1 - process-oriented variant of the same disconnections (proposed)",
+   "basis": "same bond disconnections as R0; amide pre-installed in a purchased aryl building block; solvent, deprotection, N-functionalisation and isolation conditions changed",
+   "steps": [
+    {"id": "R1-suzuki", "name": "Suzuki-Miyaura coupling with palladium control", "stage": 2, "kind": "construction",
+     "ops_ev": "A", "cond_ev": "B", "scale": "none (no PN6047-specific scale-up in the public record)",
+     "conditions": "as R0 coupling partners; catalyst loading, solvent and base to be screened; Pd removal by scavenger/crystallisation to the ICH Q3D limit",
+     "flags": ["Pd_catalyst", "Q3C2_solvent"], "sources": ["wei2000", "qian2010", "magano2011", "garrett2004", "galaffu2007", "ich_q3d"]},
+    {"id": "R1-boc", "name": "Boc removal with HCl in a Class 3 solvent; isolate the secondary amine hydrochloride", "stage": 2, "kind": "concession",
+     "ops_ev": "A", "cond_ev": "C", "scale": "none",
+     "conditions": "HCl in 2-propanol or ethyl acetate; isolation by crystallisation instead of evaporation",
+     "flags": [], "sources": ["isidro2009", "ich_q3c"]},
+    {"id": "R1-redam", "name": "N-functionalisation by reductive amination in a solvent other than 1,2-dichloroethane", "stage": 3, "kind": "construction",
+     "ops_ev": "A", "cond_ev": "D", "scale": "none",
+     "conditions": "thiazole-5-carbaldehyde, NaBH(OAc)3, THF or acetonitrile (listed by Abdel-Magid 1996 as alternatives to DCE); an ester solvent would be a hypothesis; work-up and crystallisation replace preparative HPLC",
+     "flags": ["Q3C2_solvent"], "sources": ["wo2016", "abdelmagid1996", "ich_q3c"]},
+    {"id": "R1-salt", "name": "Hydrochloride salt crystallisation as the purification step", "stage": 5, "kind": "concession",
+     "ops_ev": "A", "cond_ev": "D", "scale": "none",
+     "conditions": "crystalline Form HCl2 from 2-propanol, acetone or ethanol as listed in WO2022/013153; impurity purge by crystallisation is the unvalidated element",
+     "flags": [], "sources": ["wo2022", "bastin2000", "ich_q3a"]}
+   ]
+  },
+  "R2": {
+   "name": "R2 - alternative ordering: N-substituent installed before the alkene (proposed)",
+   "basis": "1-(thiazol-5-ylmethyl)piperidin-4-one as the piperidine building block; no N-protecting group; no late N-functionalisation",
+   "steps": [
+    {"id": "R2-Nfunc", "name": "Preparation of the N-substituted piperidone", "stage": 3, "kind": "construction",
+     "ops_ev": "C", "cond_ev": "D", "scale": "none",
+     "conditions": "4-piperidone building block with a thiazol-5-ylmethyl electrophile or by reductive amination",
+     "flags": ["Q3C2_solvent"], "sources": ["abdelmagid1996"]},
+    {"id": "R2-suzuki", "name": "Suzuki-Miyaura coupling of the N-substituted vinyl bromide", "stage": 2, "kind": "construction",
+     "ops_ev": "B", "cond_ev": "D", "scale": "none",
+     "conditions": "coupling in the presence of a basic, S/N-heteroaryl-bearing substrate (compatibility with palladium not evaluated here)",
+     "flags": ["Pd_catalyst", "Q3C2_solvent"], "sources": ["wei2000", "magano2011"]},
+    {"id": "R2-salt", "name": "Hydrochloride salt crystallisation as the purification step", "stage": 5, "kind": "concession",
+     "ops_ev": "A", "cond_ev": "D", "scale": "none",
+     "conditions": "as R1",
+     "flags": [], "sources": ["wo2022", "bastin2000"]}
+   ],
+   "note": "R2 needs its own undisclosed upstream preparation of the N-substituted vinyl halide; it is counted with the same parameter u as the other routes."
+  }
+ }
+}
