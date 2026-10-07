@@ -400,7 +400,7 @@ rows = [["Stage", "Experiment to be done (not done here)", "Decision it informs"
         ["5 Impurities", "Impurity mapping by LC-MS across all stages; spiking and purge studies; working thresholds from ICH Q3A (for doses up to 2 g/day: identification 0.10 %, qualification 0.15 %, or lower daily-intake limits)", "Whether the impurity profile of the new route is acceptable or needs further qualification", "K1, K6"],
         ["6 Safety and scale", "Reaction calorimetry and thermal-stability screening of each step before any scale-up", "Safe operating limits; go/no-go for scale", "K7"]]
 TAB(rows, "Stage-gated experimental programme required before any proposed route could be considered validated. The acceptance criteria other than the cited ICH values are "
-          "for the development team to set.", widths=[0.8, 2.7, 2.1, 0.9], size=7.2, label="valid")
+          "for the development team to set.", widths=[1.05, 2.6, 2.0, 0.85], size=7.2, label="valid")
 P("The programme is ordered so that the two dominant risks are met first (@T:valid@): the upstream route and the starting-material question, and the purge of impurities in the "
   "isolation steps. Calorimetry precedes every scale-up step, and all numerical go/no-go criteria are left to the sponsor, because inventing them without data would "
   "give a false precision. The route should be regarded as validated only when the laboratory work above has been completed on PN6047 intermediates.")
